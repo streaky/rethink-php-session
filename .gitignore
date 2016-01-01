@@ -1,0 +1,7 @@
+
+# I use phpstorm
+.idea/
+
+# local composer junk that shouldn't be in the repo
+composer.lock
+vendor/
