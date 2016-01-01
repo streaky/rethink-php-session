@@ -1,2 +1,3 @@
-# rethink_php_session
+# Rethink PHP Session
+
 RethinkDB Session Handler for PHP
