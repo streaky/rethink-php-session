@@ -23,6 +23,11 @@ class handler {
 	}
 
 	private static function setHandler() {
+
+		// NOTE: we need to call session_write_close explicitly as shutdown function so we still have
+		// the connection object available when we need to write it
+		register_shutdown_function('session_write_close');
+
 		session_set_save_handler(
 			array(__CLASS__, "open"),
 			array(__CLASS__, "close"),
