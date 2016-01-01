@@ -1,0 +1,23 @@
+{
+  "name": "streaky/rethink-php-session",
+  "type": "library",
+  "description": "RethinkDB Session Handler for PHP",
+  "homepage": "https://github.com/streaky/rethink-php-session",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Streaky",
+      "email": "streaky@mybrokenlogic.com",
+      "homepage": "https://github.com/streaky/"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "danielmewes/php-rql": "2.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "streaky\\rethink_php_session\\": "src/"
+    }
+  }
+}
