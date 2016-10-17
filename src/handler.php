@@ -38,7 +38,9 @@ class handler {
 		);
 	}
 
-	public static function open($save_path, $name) {}
+	public static function open($save_path, $name) {
+		return true;
+	}
 
 	/**
 	 * Closes the session
