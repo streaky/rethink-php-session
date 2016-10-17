@@ -54,7 +54,7 @@ class handler {
 	/**
 	 * Retrieves the session by its ID (document's id).
 	 *
-	 * @param string $id The session ID.
+	 * @param string $session_id The session ID.
 	 *
 	 * @return string The serialized session data (PHP takes care of deserialization for us).
 	 */
@@ -70,8 +70,8 @@ class handler {
 	 * Insert or overwrite session data. This will also advance the session's updated timestamp
 	 * to time(), pushing out when it will expire and be garbage collected.
 	 *
-	 * @param string $id The sesion ID.
-	 * @param string $data The serialized data to store
+	 * @param string $session_id The sesion ID.
+	 * @param string $session_data The serialized data to store
 	 *
 	 * @return bool Whether or not the operation was successful
 	 */
@@ -88,7 +88,7 @@ class handler {
 	/**
 	 * Destroys the session, deleting it from the db
 	 *
-	 * @param string $id The session ID.
+	 * @param string $session_id The session ID.
 	 *
 	 * @return bool Whether or not the operation was successful.
 	 */
