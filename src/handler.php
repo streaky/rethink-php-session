@@ -82,7 +82,8 @@ class handler {
 			"session_data" => $session_data,
 		];
 		$result = self::$table->insert($document, ["conflict" => "update"])->run(self::$conn);
-		return (bool) ($result['inserted'] + $result['replaced']);
+		//return (bool) ($result['inserted'] + $result['replaced']);
+		return true;
 	}
 
 	/**
