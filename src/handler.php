@@ -63,7 +63,8 @@ class handler {
 		if($resp === null) {
 			return "";
 		}
-		return $resp['session_data'];
+		$data = json_decode($resp['session_data'], true);
+		return serialize($data);
 	}
 
 	/**
@@ -79,7 +80,7 @@ class handler {
 		$document = [
 			"id" => $session_id,
 			"updated" => time(),
-			"session_data" => $session_data,
+			"session_data" => json_encode(unserialize($session_data)),
 		];
 		$result = self::$table->insert($document, ["conflict" => "update"])->run(self::$conn);
 		//return (bool) ($result['inserted'] + $result['replaced']);
